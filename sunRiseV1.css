@@ -130,7 +130,11 @@
     .mui-col-sm-4 {
     text-align: center;
     margin-bottom: 18px;
-}.mui-text-subhead.siteSub {
+}
+iframe{
+    display:none;
+    }
+    .mui-text-subhead.siteSub {
     text-align: center;
 }
 .mui-text-caption.siteSub {
@@ -152,6 +156,7 @@
 }
 form.eventForm label, form.eventForm input {
     color: #FFF;
+
 }img{
     max-width: 100%;
 }
@@ -199,6 +204,7 @@ h1.mui-text-subhead.breadcrumb.mui-text-white {
 }
 .label.label-default {
     position: absolute;
+    z-index: 222223323232;
     background-color: #BE1C28;
     font-size: 14px;
     text-transform: uppercase;
