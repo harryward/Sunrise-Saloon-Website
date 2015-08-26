@@ -1,0 +1,128 @@
+<template name="home">
+    <div class="mui-container">
+        <div class="mui-panel topatron">
+
+            <div class="mui-row toppromo">
+                <div class="mui-col-sm-3 promocard">
+                    <div class="mui-panel">
+                        <img src="/placeholder.png">
+                        <div class="mui-text-subhead subber">Weekly Events</div>
+                    </div>
+                </div>
+                <div class="mui-col-sm-3 promocard">
+                    <div class="mui-panel">
+                        <img src="/placeholder.png">
+                        <div class="mui-text-subhead subber">Drink Specials</div>
+                    </div>
+                </div>
+                <div class="mui-col-sm-3 promocard">
+                    <div class="mui-panel">
+                        <img src="/placeholder.png">
+                        <div class="mui-text-subhead subber">Food Menu</div>
+                    </div>
+                </div>
+                <div class="mui-col-sm-3 promocard">
+                    <div class="mui-panel">
+                        <img src="/placeholder.png">
+                        <div class="mui-text-subhead subber">Gaming</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mui-row homepage">
+
+            <div class="mui-col-sm-4">
+
+            </div>
+        </div>
+
+        <div class="mui-row">
+            <div class="mui-col-sm-8">
+                {{#each featuredEvent}}
+                <div style="cursor:pointer" onclick="Router.go('/p/eventLanding?id={{_id}}')" class="mui-col-sm-12">
+                    <div class="label label-default">Featured</div>
+                    <div class="featuredImage">
+                        <img style="width:100%" src="{{theImage}}">
+                    </div>
+                    <div class="mui-panel leadPromo">
+                        <h2 class="mui-text-headline">
+                            {{band}}
+                        </h2>
+                        <p class="mui-text-body2">
+                            {{when}}
+                            <br>
+
+                        </p>
+                    </div>
+                </div>
+                {{/each}}
+                <div class="">
+
+                    <div class="upcomingbands">
+                        {{#each events}}
+                        <div class="mui-col-sm-6" style="cursor:pointer" onclick="Router.go('/p/eventLanding?id={{_id}}')">
+                            <div class="featuredImage">
+                                <img src="{{theImage}}">
+                            </div>
+                            <div class="mui-panel">
+                                <div class="mui-text-headline subTit">{{band}}</div>
+                                <div class="mui-text-subtitle subTit">{{when}}</div>
+                            </div>
+                        </div>
+                        {{/each}}
+
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="mui-col-sm-4">
+                {{#each flyer}}
+                <div class="flyercontainer">
+                <div style="cursor:pointer" onclick="Router.go('/p/eventLanding?id={{_id}}')" class="">
+
+                    <div class="flyerbox">
+                        <div class="flyerImage">
+                            <img style="width:100%" src="{{theImage}}">
+                        </div>
+                        <!-- <h2 class="mui-text-headline">
+                            {{band}}
+                        </h2> -->
+
+                    </div>
+                </div>
+                </div>
+                {{/each}}
+                <hr>
+                <div class="vipclub">
+                    <div class="mui-text-headline">Sunrise VIP Club</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    <div class="mui-btn mui-btn-primary mui-btn-raised red">Join Now</div>
+                </div>
+                <hr>
+                <div class="facebook  mui-text-center">
+                    <iframe style="border: none; overflow: hidden; height: 427px;" src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FSunriseSaloon&amp;width&amp;height=427&amp;colorscheme=light&amp;show_faces=false&amp;header=true&amp;stream=true&amp;show_border=true"
+                    frameborder="0" scrolling="no" width="320px" height="240"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="siteFooter mui-container">
+
+        <div class="mui-col-sm-6">
+            <div class="mui-text-caption credit">Developed By</div>
+            <img src="/pool.png" width="100px">
+
+        </div>
+        <div class="mui-col-sm-6 mui-text-right">
+            <div class="mui-text-caption credit-right credit">® 2015 Sunrise Saloon <br>
+            <a href="/admin">Admin</a></div>
+
+        </div>
+
+    </div>
+
+</template>

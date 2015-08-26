@@ -1,0 +1,18 @@
+<template name="admin">
+<div class="mui-container">
+    <div class="mui-panel">
+<h1 class="mui-text-headline">Admin</h1>
+{{#if currentUser}}
+{{>loginButtons}}
+<hr>
+<div class="adminbuttons">
+<a class="mui-btn mui-btn-default" href="/p/eventForm?action=new">Post Event or Flyer</a>
+</div>
+
+{{else}}
+{{>loginButtons}}
+{{/if}}
+</div>
+</div>
+
+</template>

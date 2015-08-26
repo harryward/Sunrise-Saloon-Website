@@ -1,0 +1,221 @@
+/* CSS declarations go here */
+.navbarTop {
+    padding: 17px;
+    background-color: #F5F5F5;
+    margin-top: 18px;
+}
+.navbarBottom {
+    background-color: #000;
+    padding: 16px;
+    padding-top: 6px;
+    padding-bottom: 8px;
+}.navbarBottom a {
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin-right: 8px;
+}img{
+    max-width: 100%;
+}.mui-row.homepage {
+    margin-top: 14px;
+}
+.mui-panel.leadPromo h2 {
+    margin-top: 1px;
+    font-weight: bold;
+}.mui-panel.leadPromo p, .mui-panel.leadPromo h2 {
+    color: #FFF;
+}
+.mui-panel.leadPromo {
+    background-color: #000;
+    color: #FFF!important;
+}.navbarTop {
+    padding: 17px;
+    background-color: #232222;
+    margin-top: 18px;
+}.navbarTop a {
+    color:#fff;
+}
+.mui-text-headline.subTit {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.mui-row.homepage {
+    margin-bottom: 24px;
+}
+.featuredImage {
+    max-height: 391px;
+    overflow: hidden;
+}body {
+    background-color: #1F1F1F;
+}.mui-panel .mui-text-headline {
+    color: #FFF;
+}
+.mui-panel {
+    BACKGROUND-COLOR: #000;
+    COLOR: #FFF;
+}.mui-text-subhead.subber {
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 4px;
+    text-align: center;
+}
+.mui-panel.topatron {
+    margin-top: 13px;
+}.upcomingbands .featuredImage {
+    max-height: 235px;
+    margin-bottom:-80px;
+
+    overflow: hidden;
+}.upcomingbands .mui-panel {
+    background-color: rgba(0, 0, 0, 0.55);
+    position:relative;
+    z-index: 22;
+}.mui-panel.leadPromo {
+    margin-top: -111px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.47);
+}h2.mui-text-headline {
+    text-transform: uppercase;
+}
+.navbarTop {
+    background-color: #313131;
+}.mui-btn.mui-btn-primary.mui-btn-raised.red {
+    width: 100%;
+    background-color: #95282D;
+}.vipclub {
+    color: #FFF;
+}
+.vipclub .mui-text-headline{
+    color: #FFF;
+}
+.mui-panel.leadPromo {
+    margin-top: -106px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.47);
+}
+.mui-text-headline.subTit {
+    font-weight: bold;
+}body {
+    background: url('/bg.jpg');
+    background-size: 22%;
+    background-attachment: fixed;
+
+}
+.mui-container {
+    background-color: rgba(21, 19, 19, 0.57);
+}.navbarTop {
+    background-color: rgba(25, 25, 25, 0);
+}
+.mui-text-subhead.siteSub {
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 19px;
+    position: relative;
+}
+.mui-text-caption.siteSub {
+    color: #D8CC0E;
+}.mui-text-subhead.siteSub {
+    margin-bottom: 14px;
+}
+.mui-text-caption.credit {
+    color: #FFF;
+}.mui-text-caption.credit {
+    text-transform: uppercase;
+    margin-left: 6px;
+}.mui-text-caption.credit-right.credit {
+    margin-top: 29px;
+}@media(max-width:500px){
+    .mui-col-sm-4 {
+    text-align: center;
+    margin-bottom: 18px;
+}.mui-text-subhead.siteSub {
+    text-align: center;
+}
+.mui-text-caption.siteSub {
+    text-align: center;
+}
+}
+.mui-text-headline {
+    text-transform: uppercase;
+}
+.mui-panel.topatron {
+    margin-bottom: -24px;
+}
+.mui-text-caption.credit-right.credit {
+    position: relative;
+    top: -71px;
+    margin-right: 13px;
+}form.eventForm input {
+    border-bottom: solid 1px #FFF;
+}
+form.eventForm label, form.eventForm input {
+    color: #FFF;
+}img{
+    max-width: 100%;
+}
+.modal-content{
+    background:#222;
+}
+.modal-content input{
+    color:#333;
+}
+.xdsoft_mounthpicker {
+    z-index: 3;
+}.form-control {
+    color: #000!important;
+}
+
+.upcomingbands .featuredImage img {
+    min-height: 180px!important;
+    position: relative;
+    top: 9px;
+}
+.upcomingbands .featuredImage {
+    max-height: 173px;
+    margin-bottom: -80px;
+    overflow: hidden;
+    position: relative;
+    top: 1px;
+    height: 100%;
+}
+.mui-text-subhead.mui-text-white.when {
+    color: #F4E806;
+    margin-bottom: 20px;
+}.landing .mui-text-subhead.mui-text-white {
+    color: #D3D3D3!important;
+    text-transform: uppercase;
+}.mui-col-sm-4.featuredImg {
+    margin-top: 22px;
+}
+h1.mui-text-subhead.breadcrumb.mui-text-white {
+    background-color: #000;
+    margin-bottom: 0px;
+}h1.mui-text-subhead.breadcrumb.mui-text-white a {
+    color: #BE1C29;
+}
+.label.label-default {
+    position: absolute;
+    background-color: #BE1C28;
+    font-size: 14px;
+    text-transform: uppercase;
+}.mui-container.landing {
+    min-height: 81vh;
+}.mui-row.adminpanel {
+    margin-bottom: 11px;
+    margin-top: 11px;
+}.upcomingbands {
+    min-height: 150vh!important;
+}.mui-text-caption.credit-right.credit {
+    top: -4px;
+}.label.label-default {
+    position: absolute;
+    background-color: rgba(190, 28, 40, 0.66);
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0px;
+    padding: 9px;
+}hr {
+    border: solid 1px rgba(0, 0, 0, 0);
+}

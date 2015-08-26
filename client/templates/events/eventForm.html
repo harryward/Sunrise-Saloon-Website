@@ -1,0 +1,113 @@
+<template name="eventForm">
+
+    <!--
+BAND NAME/TITLE
+DATE/TIME
+IMAGE
+SHORT DESCRIPTION -->
+
+
+    <div class="mui-container">
+        <h1 class="mui-text-headline mui-text-white"> New Event</h1>
+        <div class="mui-panel">
+
+            <form class="eventForm">
+                <div class="mui-row">
+                    <div class="mui-col-sm-6">
+                        <!-- FORM FIELD START     -->
+                        <div class="mui-form-group">
+                            <label>Band Name/Title</label>
+                            <input name="band" class="mui-form-control">
+                        </div>
+
+
+                        <!-- FORM FIELD START     -->
+                        <div class="mui-form-group">
+                            <label>Featured</label>
+                            <select name="featured" class="form-control">
+                                <option>false</option>
+                                <option>true</option>
+                            </select>
+                        </div>
+
+                        <!-- FORM FIELD START     -->
+                        <div class="mui-form-group">
+                            <label>Flyer (right rail)</label>
+                            <select name="flyer" class="form-control">
+                                <option>false</option>
+                                <option>true</option>
+                            </select>
+                        </div>
+
+
+                        <!-- FORM FIELD START     -->
+
+
+                        <div class="mui-form-group">
+                            <label>Date/Time</label>
+                            <input name="date" class="datepicker mui-form-control">
+                        </div>
+                        <!-- FORM FIELD END     -->
+                        <!-- FORM FIELD START     -->
+                        <div class="mui-form-group">
+                            <label>Description</label>
+                            <div id="summernote"></div>
+                        </div>
+                        <!-- FORM FIELD END     -->
+                        <br>
+                        <button type="submit" class="mui-btn mui-btn-lg mui-btn-primary">Publish</button>
+                    </div>
+                    <div class="mui-col-sm-6">
+
+                        <div class="mui-col-sm-12 mui-text-left">
+
+                        </div>
+
+
+
+                        <!-- FORM FIELD END     -->
+                        <div class="mui-col-sm-6">
+
+                            <!-- FORM FIELD START     -->
+                            <div class="mui-form-group">
+                                <label>Featured Image</label>
+                                <input type="file" class="file mui-form-control">
+                                <br> {{#if featuredImage}}
+                                <img style="max-width:100%;width:200px;" src="{{featuredImage}}"> {{else}}
+                                <img style="max-width:100%;width:200px;" src="/placeholder.png"> {{/if}}
+                            </div>
+                            <!-- FORM FIELD END     -->
+                        </div>
+                        <div class="mui-col-sm-6">
+                            <!-- FORM FIELD START     -->
+                            <div class="mui-text-body1 mui-text-right mui-text-white mui-panel">
+                                <small>Acceptable Image Formats:
+                                    <br> .png
+                                    <br> .jpeg
+                                    <br> .jpg
+                                    <br>
+                                </small>
+                            </div>
+                            <!-- FORM FIELD END     -->
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="mui-row">
+
+                </div>
+
+
+
+
+                <script>
+                    initSummernote()
+                </script>
+
+
+            </form>
+        </div>
+    </div>
+
+</template>
