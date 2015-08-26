@@ -40,20 +40,13 @@
         <div class="mui-row">
             <div class="mui-col-sm-8">
                 {{#each featuredEvent}}
-                <div style="cursor:pointer" onclick="Router.go('/p/eventLanding?id={{_id}}')" class="mui-col-sm-12">
-                    <div class="label label-default">Featured</div>
-                    <div class="featuredImage">
-                        <img style="width:100%" src="{{theImage}}">
+                <div class="mui-col-sm-12 mainPromo" style="cursor:pointer" onclick="Router.go('/p/eventLanding?id={{_id}}')">
+                    <div style="background:url('{{theImage}}');background-size:cover;" class="featuredImage">
+                        <img class="gradientImg" src="/gradient.png">
                     </div>
-                    <div class="mui-panel leadPromo">
-                        <h2 class="mui-text-headline">
-                            {{band}}
-                        </h2>
-                        <p class="mui-text-body2">
-                            {{when}}
-                            <br>
-
-                        </p>
+                    <div class="mui-panel">
+                        <div class="mui-text-headline subTit">{{band}}</div>
+                        <div class="mui-text-subtitle subTit">{{when}}</div>
                     </div>
                 </div>
                 {{/each}}
@@ -62,8 +55,8 @@
                     <div class="upcomingbands">
                         {{#each events}}
                         <div class="mui-col-sm-6" style="cursor:pointer" onclick="Router.go('/p/eventLanding?id={{_id}}')">
-                            <div class="featuredImage">
-                                <img src="{{theImage}}">
+                            <div style="background:url('{{theImage}}');background-size:cover;" class="featuredImage">
+                                <img class="gradientImg" src="/gradient.png">
                             </div>
                             <div class="mui-panel">
                                 <div class="mui-text-headline subTit">{{band}}</div>

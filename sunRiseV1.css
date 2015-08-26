@@ -224,3 +224,8 @@ h1.mui-text-subhead.breadcrumb.mui-text-white {
     font-size: 35px;
     margin-bottom: 3px;
 }
+img.gradientImg {
+    margin-top: -10px;
+}.mainPromo .mui-panel {
+    margin-top: -60px;
+}
