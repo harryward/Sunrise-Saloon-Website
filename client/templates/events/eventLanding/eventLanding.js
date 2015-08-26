@@ -6,6 +6,6 @@ Template.eventLanding.helpers({
         return Images.findOne(Events.findOne(Session.get('params').id).mainImage).url()
     },
     when:function(){
-        return moment(Events.findOne(Session.get('params').id).date).format('MMM Do @ h:mm a')
+        return moment(this.date).format('dddd - MMM Do @ h:mm a')
     }
 });

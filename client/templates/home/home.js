@@ -82,6 +82,6 @@ promoImage:function(){
     }).mainImage).url()
 },
 when:function(){
-    return moment(this.date).format('MMM Do @ h:mm a')
+    return moment(this.date).format('ddd - MMM Do @ h:mm a')
 }
 });
