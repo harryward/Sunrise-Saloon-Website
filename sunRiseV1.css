@@ -238,3 +238,11 @@ img.gradientImg {
     width: 100%;
 
 }
+.upcomingbands .featuredImage {
+    max-height: 219px;
+    margin-bottom: -80px;
+    overflow: hidden;
+    position: relative;
+    top: 1px;
+    height: 100%;
+}
