@@ -3,25 +3,25 @@
         <div class="mui-panel topatron">
 
             <div class="mui-row toppromo">
-                <div class="mui-col-sm-3 promocard">
+                <div style="cursor:pointer" onclick="Router.go('/p/landingPage')" class="mui-col-sm-3 promocard">
                     <div class="mui-panel">
                         <img src="/placeholder.png">
                         <div class="mui-text-subhead subber">Weekly Events</div>
                     </div>
                 </div>
-                <div class="mui-col-sm-3 promocard">
+                <div style="cursor:pointer" onclick="Router.go('/p/landingPage')" class="mui-col-sm-3 promocard">
                     <div class="mui-panel">
                         <img src="/placeholder.png">
                         <div class="mui-text-subhead subber">Drink Specials</div>
                     </div>
                 </div>
-                <div class="mui-col-sm-3 promocard">
+                <div style="cursor:pointer" onclick="Router.go('/p/landingPage')" class="mui-col-sm-3 promocard">
                     <div class="mui-panel">
                         <img src="/placeholder.png">
                         <div class="mui-text-subhead subber">Food Menu</div>
                     </div>
                 </div>
-                <div class="mui-col-sm-3 promocard">
+                <div style="cursor:pointer" onclick="Router.go('/p/landingPage')" class="mui-col-sm-3 promocard">
                     <div class="mui-panel">
                         <img src="/placeholder.png">
                         <div class="mui-text-subhead subber">Gaming</div>
@@ -88,8 +88,26 @@
                     </div>
                 </div>
                 </div>
-                {{/each}}
                 <hr>
+                {{/each}}
+                {{#each flyerTwo}}
+                <div class="flyercontainer">
+                <div style="cursor:pointer" onclick="Router.go('/p/eventLanding?id={{_id}}')" class="">
+
+                    <div class="flyerbox">
+                        <div class="flyerImage">
+                            <img style="width:100%" src="{{theImage}}">
+                        </div>
+                        <!-- <h2 class="mui-text-headline">
+                            {{band}}
+                        </h2> -->
+
+                    </div>
+                </div>
+                </div>
+                <hr>
+                {{/each}}
+
                 <div class="vipclub mui-panel">
                     <div class="mui-text-headline">Sunrise VIP Club</div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>

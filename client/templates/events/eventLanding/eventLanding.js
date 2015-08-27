@@ -7,5 +7,16 @@ Template.eventLanding.helpers({
     },
     when:function(){
         return moment(this.date).format('dddd - MMM Do @ h:mm a')
+    },
+    flyerEvent:function(){
+        if(Events.findOne(Session.get('params').id).flyer === 'true'){
+            return true
+        }else{
+            if(Events.findOne(Session.get('params').id).flyertwo === 'true'){
+            return true
+        }else{
+            return false
+        }
+    }
     }
 });

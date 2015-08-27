@@ -1,6 +1,30 @@
 <template name="eventLanding">
     <div class="mui-container landing">
 
+{{#if flyerEvent}}
+<div class="mui-text-left">
+
+<h1 class="mui-text-subhead breadcrumb mui-text-white"><a href="/"> Flyers</a> > {{thisEvent.band}}</h1>
+<div class="mui-row">
+    <div class="mui-col-sm-7">
+<img src="{{theImage}}">
+</div>
+<div class="mui-col-sm-5">
+
+{{#if thisEvent.descriptionHTML}}
+<div class="mui-panel">
+<div class=" mui-text-body1 mui-text-white">
+    <div class="mui-text-subhead mui-text-white">Details</div>
+    {{{thisEvent.descriptionHTML}}}
+</div>
+</div>
+{{/if}}
+<hr>
+<div class="mui-btn mui-btn-danger" onclick="Events.remove({'_id':'{{thisEvent._id}}'})">Delete</div>
+</div>
+</div>
+</div>
+{{else}}
         <h1 class="mui-text-subhead breadcrumb mui-text-white"><a href="/"> Shows</a> > {{thisEvent.band}}</h1>
         <div class="mui-row">
             <div class="mui-col-sm-4 featuredImg">
@@ -8,13 +32,7 @@
             </div>
             <div class="mui-col-sm-8">
                 <h1 class="mui-text-headline mui-text-white">{{thisEvent.band}}</h1>
-                {{#if currentUser}}
-                <div class="mui-row adminpanel">
-                    <div class="mui-col-sm-12">
-                        <div class="mui-btn mui-btn-danger" onclick="Events.remove({'_id':'{{thisEvent._id}}'})">Delete</div>
-                    </div>
-                </div>
-                {{/if}}
+
                 <div class="mui-panel">
                     <div class="mui-text-subhead mui-text-white">When</div>
                     <div class="mui-text-headline mui-text-white when">{{when}}</div>
@@ -24,7 +42,17 @@
                         {{{thisEvent.descriptionHTML}}}
                     </div>
                 </div>
+                <hr>
+                {{#if currentUser}}
+                <div class="mui-row adminpanel">
+                    <div class="mui-col-sm-12">
+                        <div class="mui-btn mui-btn-danger" onclick="Events.remove({'_id':'{{thisEvent._id}}'})">Delete</div>
+                    </div>
+                </div>
+                {{/if}}
             </div>
         </div>
+    {{/if}}
     </div>
+
 </template>
