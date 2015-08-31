@@ -6,7 +6,7 @@ Template.home.helpers({
         return Events.find({
             'sDate': {
                 $gte: new Date(startDate),
-                // $lte: new Date(endDate) dd,
+                // $lte: new Date(endDate),
                 // $lte:endDate,
             },
             'flyer': 'false',
