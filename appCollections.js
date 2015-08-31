@@ -8,5 +8,5 @@ Events = new Mongo.Collection("Events")
 // });
 
 Images = new FS.Collection("images", {
- stores: [new FS.Store.FileSystem("images", {path: "~/uploads"})]
+ stores: [new FS.Store.GridFS("images", {path: "~/uploads"})]
 });
