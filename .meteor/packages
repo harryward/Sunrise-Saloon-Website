@@ -11,5 +11,4 @@ cfs:gridfs
 cfs:graphicsmagick
 drewy:datetimepicker
 momentjs:moment
-aldeed:http
 okgrow:iron-router-autoscroll
