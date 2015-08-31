@@ -6,7 +6,7 @@ Template.eventLanding.helpers({
         return Images.findOne(Events.findOne(Session.get('params').id).mainImage).url()
     },
     when:function(){
-        return moment(this.date).format('dddd - MMM Do @ h:mm a')
+        return moment(this.sDate).format('dddd - MMM Do @ h:mm a')
     },
     flyerEvent:function(){
         if(Events.findOne(Session.get('params').id).flyer === 'true'){
