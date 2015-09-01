@@ -23,7 +23,7 @@ Template.eventCal.helpers({
                     calendar.forEach(function (event) {
                         eventDetails = {};
                         for(key in event)
-                            eventDetails['start'] = event.start;
+                            eventDetails['start'] = event.sDate;
                             eventDetails['title'] = event.band;
                             eventDetails['data'] = event
                         events.push(eventDetails);
