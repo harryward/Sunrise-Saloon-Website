@@ -263,3 +263,6 @@ img.gradientImg {
     padding-bottom: 0px;
     margin-bottom: 4px;
 }
+.mui-panel.calendarpanel {
+    margin-top: 11px;
+}

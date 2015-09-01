@@ -77,6 +77,8 @@ Template.eventForm.events({
             var Summer = $('#summernote').code()
             o["description"] = Summer.replace(/<\/?[^>]+(>|$)/g, " ");
             o["descriptionHTML"] = Summer
+            o["title"] = $('.title').val()
+            o["start"] = $('.datepicker').val()
             o["sDate"] = new Date($('.datepicker').val())
             // o["eDate"] = new Date($('.endDate').val())
             o["mainImage"] = Session.get('mainImage')
