@@ -1,29 +1,33 @@
 <template name="home">
+    {{#if sawDoor}}
+    {{else}}
+    {{>doorOpen}}
+    {{/if}}
     <div class="mui-container">
         <div class="mui-panel topatron">
 
             <div class="mui-row toppromo">
-                <div style="cursor:pointer" onclick="Router.go('/p/landingPage')" class="mui-col-sm-3 promocard">
-                    <div class="mui-panel">
-                        <img src="/placeholder.png">
-                        <div class="mui-text-subhead subber">Weekly Events</div>
+                <div style="cursor:pointer" onclick="Router.go('/p/eventCal')" class="mui-col-sm-3 promocard">
+                    <div class="mui-panel mui-text-center">
+                        <img src="/bar.jpg">
+                        <div class="mui-text-subhead subber">Event Calendar</div>
                     </div>
                 </div>
-                <div style="cursor:pointer" onclick="Router.go('/p/landingPage')" class="mui-col-sm-3 promocard">
+                <div style="cursor:pointer" onclick="Router.go('/p/drinkSpecials')" class="mui-col-sm-3 promocard">
                     <div class="mui-panel">
-                        <img src="/placeholder.png">
+                        <img src="/beer.png">
                         <div class="mui-text-subhead subber">Drink Specials</div>
                     </div>
                 </div>
-                <div style="cursor:pointer" onclick="Router.go('/p/landingPage')" class="mui-col-sm-3 promocard">
+                <div style="cursor:pointer" onclick="Router.go('/p/foodMenu')" class="mui-col-sm-3 promocard">
                     <div class="mui-panel">
-                        <img src="/placeholder.png">
+                        <img style="min-height:170px" src="/pizza.jpeg">
                         <div class="mui-text-subhead subber">Food Menu</div>
                     </div>
                 </div>
-                <div style="cursor:pointer" onclick="Router.go('/p/landingPage')" class="mui-col-sm-3 promocard">
+                <div style="cursor:pointer" onclick="Router.go('/p/game')" class="mui-col-sm-3 promocard">
                     <div class="mui-panel">
-                        <img src="/placeholder.png">
+                        <img src="/gaming.png">
                         <div class="mui-text-subhead subber">Gaming</div>
                     </div>
                 </div>
@@ -41,7 +45,7 @@
             <div class="mui-col-sm-8">
                 {{#each featuredEvent}}
                 <div class="mui-col-sm-12 mainPromo" style="cursor:pointer" onclick="Router.go('/p/eventLanding?id={{_id}}')">
-                <div class="label label-default red">Featured</div>
+                    <div class="label label-default red">Featured</div>
                     <div style="background:url('{{theImage}}');background-size:cover;" class="featuredImage">
                         <img class="gradientImg" src="/gradient.png">
                     </div>
@@ -75,43 +79,44 @@
             <div class="mui-col-sm-4">
                 {{#each flyer}}
                 <div class="flyercontainer">
-                <div style="cursor:pointer" onclick="Router.go('/p/eventLanding?id={{_id}}')" class="">
+                    <div style="cursor:pointer" onclick="Router.go('/p/eventLanding?id={{_id}}')" class="">
 
-                    <div class="flyerbox">
-                        <div class="flyerImage">
-                            <img style="width:100%" src="{{theImage}}">
-                        </div>
-                        <!-- <h2 class="mui-text-headli ddne">
+                        <div class="flyerbox">
+                            <div class="flyerImage">
+                                <img style="width:100%" src="{{theImage}}">
+                            </div>
+                            <!-- <h2 class="mui-text-headli ddne">
                             {{band}}dd
                         </h2> d -->
 
+                        </div>
                     </div>
                 </div>
-                </div>
-                <hr>
-                {{/each}}
-                {{#each flyerTwo}}
+                <hr> {{/each}} {{#each flyerTwo}}
                 <div class="flyercontainer">
-                <div style="cursor:pointer" onclick="Router.go('/p/eventLanding?id={{_id}}')" class="">
+                    <div style="cursor:pointer" onclick="Router.go('/p/eventLanding?id={{_id}}')" class="">
 
-                    <div class="flyerbox">
-                        <div class="flyerImage">
-                            <img style="width:100%" src="{{theImage}}">
-                        </div>
-                        <!-- <h2 class="mui-text-headline">
+                        <div class="flyerbox">
+                            <div class="flyerImage">
+                                <img style="width:100%" src="{{theImage}}">
+                            </div>
+                            <!-- <h2 class="mui-text-headline">
                             {{band}}
                         </h2> -->
 
+                        </div>
                     </div>
                 </div>
-                </div>
-                <hr>
-                {{/each}}
+                <hr> {{/each}}
 
                 <div class="vipclub mui-panel">
                     <div class="mui-text-headline">Sunrise VIP Club</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                    <div class="mui-btn mui-btn-primary mui-btn-raised red">Join Now</div>
+                    <p>Be the first to know about our upcoming events, music acts and exclusive food and drink specials! Click below to Join.</p>
+                    <div class="mui-btn mui-btn-primary mui-btn-raised joinMe red">Join Now</div>
+                    <div class="textpoolWidget" style="display:none;">
+                        <div class="mui-btn mui-btn-danger mui-pull-right closeMe">X</div>
+                        <iframe class="textpoolwidget" frameborder="none" scrolling="no" width="100%" height="640px" src="http://textpool.io/p/landing?id=j8QgzastsYE3jGHaB&preview=yes"></iframe>
+                    </div>
                 </div>
                 <hr>
                 <div class="facebook  mui-text-center">
@@ -130,8 +135,9 @@
 
         </div>
         <div class="mui-col-sm-6 mui-text-right">
-            <div class="mui-text-caption credit-right credit">® 2015 Sunrise Saloon <br>
-            <a href="/admin">Admin</a></div>
+            <div class="mui-text-caption credit-right credit">® 2015 Sunrise Saloon
+                <br>
+                <a href="/admin">Admin</a></div>
 
         </div>
 

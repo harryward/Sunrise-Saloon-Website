@@ -1,4 +1,7 @@
 Template.home.helpers({
+sawDoor:function(){
+    return Session.get('sawDoor')
+},
     events: function() {
 
         var startDate = new Date()
@@ -105,5 +108,14 @@ Template.home.helpers({
     },
     when: function() {
         return moment(this.date).format('ddd - MMM Do @ h:mm a')
+    }
+});
+Template.home.events({
+    "click .joinMe": function(event, template){
+        $('.textpoolWidget').fadeIn()
+
+    },
+    "click .closeMe":function(){
+        $('.textpoolWidget').fadeOut()
     }
 });
