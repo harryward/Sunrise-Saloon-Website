@@ -41,7 +41,30 @@ Template.eventForm.helpers({
     featuredImage: function(){
         return Images.findOne(Session.get('mainImage')).url()
     },
+    'files':function(){
+        return Images.find().fetch()
+    }
 
+});
+Template.fileUploadRow.helpers({
+  uploadCompleteClass: function () {
+      console.log(this.uploadProgress())
+    return this.uploadProgress() == 100 ? 'progress-success' : '';
+},
+notLoaded: function () {
+    if(this.uploadProgress() < 100){
+  return true
+  }else{
+      return false
+  }
+}
+});
+
+Template.fileUploadRow.events({
+    "click .deleter": function(event, template){
+        Images.remove(this._id)
+
+    }
 });
 Template.eventForm.events({
     'change .file': function(event, template) {
@@ -60,6 +83,16 @@ Template.eventForm.events({
             }
         });
     });
+},
+"change .calOnly":function(){
+$('.fff').toggle()
+
+},
+"click .cleanEm":function(){
+    $.each(FS.HTTP.uploadQueue._processList.fetch(),function(){
+        this.queue.cancel();
+    })
+    alert('file queue purged, now click delete file on the files below')
 },
 "submit .eventForm": function(event, template) {
         event.preventDefault()

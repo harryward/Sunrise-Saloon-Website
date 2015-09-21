@@ -1,21 +1,18 @@
 <template name="home">
-    {{#if sawDoor}}
-    {{else}}
-    {{>doorOpen}}
-    {{/if}}
+    {{#if sawDoor}} {{else}} {{>doorOpen}} {{/if}}
     <div class="mui-container">
         <div class="mui-panel topatron">
 
             <div class="mui-row toppromo">
                 <div style="cursor:pointer" onclick="Router.go('/p/eventCal')" class="mui-col-sm-3 promocard">
                     <div class="mui-panel mui-text-center">
-                        <img src="/bar.jpg">
+                        <img src="/sign.png">
                         <div class="mui-text-subhead subber">Event Calendar</div>
                     </div>
                 </div>
                 <div style="cursor:pointer" onclick="Router.go('/p/drinkSpecials')" class="mui-col-sm-3 promocard">
                     <div class="mui-panel">
-                        <img src="/beer.png">
+                        <img src="/drink.png">
                         <div class="mui-text-subhead subber">Drink Specials</div>
                     </div>
                 </div>
@@ -109,6 +106,10 @@
                 </div>
                 <hr> {{/each}}
 
+                <div class="mui-panel mui-text-center">
+                    <img src="/ticket.png">
+                </div>
+
                 <div class="vipclub mui-panel">
                     <div class="mui-text-headline">Sunrise VIP Club</div>
                     <p>Be the first to know about our upcoming events, music acts and exclusive food and drink specials! Click below to Join.</p>
@@ -126,21 +127,8 @@
             </div>
 
         </div>
+        {{>footer}}
     </div>
-    <div class="siteFooter mui-container">
 
-        <div class="mui-col-sm-6">
-            <div class="mui-text-caption credit">Developed By</div>
-            <img src="/pool.png" width="100px">
-
-        </div>
-        <div class="mui-col-sm-6 mui-text-right">
-            <div class="mui-text-caption credit-right credit">® 2015 Sunrise Saloon
-                <br>
-                <a href="/admin">Admin</a></div>
-
-        </div>
-
-    </div>
 
 </template>

@@ -14,6 +14,16 @@ SHORT DESCRIPTION -->
             <form class="eventForm">
                 <div class="mui-row">
                     <div class="mui-col-sm-6">
+
+                        <!-- FORM FIELD START     -->
+                        <div class="mui-form-group">
+                            <label>Calendar Only</label>
+                            <select name="calOnly" class="calOnly form-control">
+                                <option>false</option>
+                                <option>true</option>
+                            </select>
+                        </div>
+
                         <!-- FORM FIELD START     -->
                         <div class="mui-form-group">
                             <label>Band Name/Title</label>
@@ -22,7 +32,7 @@ SHORT DESCRIPTION -->
 
 
                         <!-- FORM FIELD START     -->
-                        <div class="mui-form-group">
+                        <div class="mui-form-group fff">
                             <label>Featured</label>
                             <select name="featured" class="form-control">
                                 <option>false</option>
@@ -31,7 +41,7 @@ SHORT DESCRIPTION -->
                         </div>
 
                         <!-- FORM FIELD START     -->
-                        <div class="mui-form-group">
+                        <div class="mui-form-group fff">
                             <label>Flyer (right rail)</label>
                             <select name="flyer" class="form-control">
                                 <option>false</option>
@@ -40,7 +50,7 @@ SHORT DESCRIPTION -->
                         </div>
 
                         <!-- FORM FIELD START     -->
-                        <div class="mui-form-group">
+                        <div class="mui-form-group fff">
                             <label>Flyer 2 (right rail bottom)</label>
                             <select name="flyertwo" class="form-control">
                                 <option>false</option>
@@ -68,35 +78,36 @@ SHORT DESCRIPTION -->
                     </div>
                     <div class="mui-col-sm-6">
 
-                        <div class="mui-col-sm-12 mui-text-left">
-
-                        </div>
-
 
 
                         <!-- FORM FIELD END     -->
-                        <div class="mui-col-sm-6">
+                        <div class="mui-col-sm-12">
 
                             <!-- FORM FIELD START     -->
                             <div class="mui-form-group">
                                 <label>Featured Image</label>
                                 <input type="file" class="file mui-form-control">
+
                                 <br> {{#if featuredImage}}
                                 <img style="max-width:100%;width:200px;" src="{{featuredImage}}"> {{else}}
                                 <img style="max-width:100%;width:200px;" src="/placeholder.png"> {{/if}}
                             </div>
-                            <!-- FORM FIELD END     -->
-                        </div>
-                        <div class="mui-col-sm-6">
-                            <!-- FORM FIELD START     -->
-                            <div class="mui-text-body1 mui-text-right mui-text-white mui-panel">
-                                <small>Acceptable Image Formats:
-                                    <br> .png
-                                    <br> .jpeg
-                                    <br> .jpg
-                                    <br>
-                                </small>
-                            </div>
+                            <h6 class="mui-text-subhead mui-text-white">File Queue <a class="mui-pull-right btn btn-xs btn-danger cleanEm">Purge</a></h6>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 150px;">Name</th>
+                                        <th style="width: 150px;">Size</th>
+                                        <th style="width: 200px;">Progress</th>
+                                        <th style="width: 200px;">Actions</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    {{#each files}} {{> fileUploadRow}} {{/each}}
+                                </tbody>
+                            </table>
+
                             <!-- FORM FIELD END     -->
                         </div>
 
@@ -117,6 +128,27 @@ SHORT DESCRIPTION -->
 
             </form>
         </div>
+        {{>footer}}
     </div>
 
+</template>
+<template name="fileUploadRow">
+    {{#if notLoaded}}
+    <tr>
+        <td>{{name}}</td>
+        <td>{{size}}</td>
+        <td>
+ <div class="mui-text-button mui-text-white"><i class="fa fa-spin fa-spinner"></i> uploading</div>
+            <!-- <div class="progress progress-striped {{uploadCompleteClass}}">
+
+                <div class="bar" style="width:{{uploadProgress}}%">
+                    <span style="padding: 2px; float: left; color: #000;">
+                        {{uploadProgress}}%
+                    </span>
+                </div>
+            </div> -->
+        </td>
+        <td>{{status}} <a href="#" class="btn btn-danger btn-xs deleter">delete file</a></td>
+    </tr>
+    {{/if}}
 </template>

@@ -5,7 +5,7 @@
                 <img src="/gradient.png" class="topgradient">
                 <div class="mui-row">
                     <div class="mui-col-sm-12 mui-text-center">
-                        <a class="brand">
+                        <a href="/" class="brand">
                             <img class="thelogo" src="/logo.png" style="width:300px">
                         </a>
                     </div>
@@ -30,8 +30,8 @@
             <div class="navbarBottom">
                 <a href="/">Home</a>
                 <a href="/p/gallery">Gallery</a>
-
-                <a href="#" class="mui-pull-right">Contact</a>
+                <div class="mui-pull-right">{{#if currentUser}}<a style="color:yellow" href="/p/eventForm?action=new">+ New Event</a>{{/if}}
+                <a href="/p/contact" >Contact</a></div>
             </div>
         </div>
     </div>

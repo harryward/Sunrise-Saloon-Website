@@ -1,12 +1,11 @@
 Events = new Mongo.Collection("Events")
 
-// var thumbStore = new FS.Store.GridFS("pictures", {
-//    transformWrite: function(fileObj, readStream, writeStream) {
-//     gm(readStream, fileObj.name).stream().pipe(writeStream);
-//    }
-//
-// });
+var thumbStore = new FS.Store.GridFS("pictures", {
+   transformWrite: function(fileObj, readStream, writeStream) {
+    gm(readStream, fileObj.name()).autoOrient().resize('600', '600^').stream().pipe(writeStream);
+   }
+});
 
 Images = new FS.Collection("images", {
- stores: [new FS.Store.GridFS("images", {path: "~/uploads"})]
+ stores: [thumbStore]
 });

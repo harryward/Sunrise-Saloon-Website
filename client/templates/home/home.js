@@ -2,6 +2,7 @@ Template.home.helpers({
 sawDoor:function(){
     return Session.get('sawDoor')
 },
+
     events: function() {
 
         var startDate = new Date()
@@ -14,6 +15,7 @@ sawDoor:function(){
             },
             'flyer': 'false',
             'flyertwo': 'false',
+            'calOnly':{$ne: 'true'},
             // 'categories': Session.get('queryCat'),
             // 'placeData.locality': Session.get('myCity')
         }, {
@@ -33,6 +35,7 @@ sawDoor:function(){
                 // $lte:endDate,
             },
             'featured': 'true',
+            'calOnly':{$ne: 'true'},
 
             // 'categories': Session.get('queryCat'),
             // 'placeData.locality': Session.get('myCity')
@@ -54,6 +57,7 @@ sawDoor:function(){
                 // $lte:endDate,
             },
             'flyer': 'true',
+            'calOnly':{$ne: 'true'},
 
             // 'categories': Session.get('queryCat'),
             // 'placeData.locality': Session.get('myCity')
@@ -75,6 +79,7 @@ sawDoor:function(){
                 // $lte:endDate,
             },
             'flyertwo': 'true',
+            'calOnly':{$ne: 'true'},
 
             // 'categories': Session.get('queryCat'),
             // 'placeData.locality': Session.get('myCity')
@@ -97,6 +102,7 @@ sawDoor:function(){
                 // $lte:endDate,
             },
             'featured': 'true',
+            'calOnly':{$ne: 'true'},
 
             // 'categories': Session.get('queryCat'),
             // 'placeData.locality': Session.get('myCity')

@@ -1,3 +1,4 @@
+
 Template.eventLanding.helpers({
     thisEvent: function(){
         return Events.findOne(Session.get('params').id)
